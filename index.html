@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Aditya Kumar - Web Developer, Python Programmer, and Tech Enthusiast.">
+    <title>Aditya Kumar | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--   Div for nav bar -->
+   <nav class="navbar">
+    <div class="logo">Aditya <span>Kumar</span></div>
+
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Project">Project</a></li>
+        <li><a href="#Contact">Contact Me</a></li>
+    </ul>
+</nav>
+
+
+    <!-- Div for Main Screen -->
+
+    <div id="mainscreen">
+    <div id="image">
+        <div class="image-border">
+            <img src="Anime.jpeg" alt="Aditya">
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Hi, it's <span>Aditya</span></h1>
+        <h2>I'm a <span id="typed-role">Python Developer</span></h2>
+        <br>
+        <p>Hi, I'm Aditya Kumar — a passionate software developer specializing in desktop applications using Python.
+I also build responsive and functional applications for web and mobile platforms. Whether it's a powerful desktop tool, a dynamic website, or a mobile app, I focus on creating seamless user experiences backed by clean, maintainable code.
+
+</p>
+
+        <!-- Div class For social Media icon and div class for button -->
+<div class="social-cv-container">
+    <div class="social-icons">
+        <a href="#" class="icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon github" aria-label="Github"><i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="btn">
+       <br> <button>Download CV</button>
+    </div>
+</div>
+    </div>
+
+</div>
+<section id="Contact">
+  <div class="contact-container">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Type your message..." rows="5" required></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-image">
+      <div class="image-border">
+        <img src="Anime.jpeg" alt="Aditya" />
+      </div>
+    </div>
+  </div>
+</section>
+<!--  Div class for Skill Section -->
+<section id="Skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card html">
+      <i class="fab fa-html5"></i>
+      <p>HTML</p>
+    </div>
+    <div class="skill-card css">
+      <i class="fab fa-css3-alt"></i>
+      <p>CSS</p>
+    </div>
+    <div class="skill-card js">
+      <i class="fab fa-js-square"></i>
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-card python">
+      <i class="fab fa-python"></i>
+      <p>Python</p>
+    </div>
+  </div>
+</section>
+<!-- Div class for Project Section -->
+<section id="Project">
+  <h2 class="section-title">My Projects</h2>
+  <div class="project-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>Smart Drainage Surveillance System</h3>
+      <p>This project focuses on front-end design for a smart drainage monitoring system, ensuring real-time tracking and alerts.</p>
+      <span class="tech-used">Tech Used: HTML, CSS, JavaScript</span>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Python Chat Application</h3>
+      <p>A real-time multi-client chat application using Python's socket programming, with GUI developed using Tkinter.</p>
+      <span class="tech-used">Tech Used: Python, Socket, Tkinter</span>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h3>Employee Management System</h3>
+      <p>A desktop application to manage employee records with CRUD functionality, search, and data persistence.</p>
+      <span class="tech-used">Tech Used: Python, Django, SQLite</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>Aditya Kumar</h2>
+      <p>Creating innovative digital experiences. Let’s build something great together.</p>
+    </div>
+    <div class="footer-socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Aditya Kumar. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+
+
+
+        
+    </div>
+    <script>
+    const roles = ["Python Developer", "Web Developer", "Data Scientist"];
+    const roleSpan = document.getElementById("typed-role");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeEffect() {
+        const currentRole = roles[roleIndex];
+        
+        if (typing) {
+            roleSpan.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentRole.length) {
+                typing = false;
+                setTimeout(typeEffect, 1000); // pause before deleting
+                return;
+            }
+        } else {
+            roleSpan.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                typing = true;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+        }
+
+        setTimeout(typeEffect, typing ? 100 : 50); // typing speed
+    }
+
+    typeEffect();
+
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+
+</body>
+</html>
